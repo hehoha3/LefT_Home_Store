@@ -1,0 +1,105 @@
+<div id="form-main" style="padding-top: 70px">
+  <div id="form-div">
+    <form
+      class="addProduct"
+      id="addProduct"
+      #addProduct="ngForm"
+      (ngSubmit)="onProductUpdate(addProduct.value)"
+    >
+      <p>
+        <input
+          name="id"
+          type="number"
+          class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+          placeholder="id Sản Phẩm Muốn Sửa"
+          ngModel
+        />
+      </p>
+      <p>
+        <input
+          name="name"
+          type="text"
+          class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+          placeholder="Tên Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <input
+          name="thumbnail"
+          type="text"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Hình Ảnh"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <textarea
+          name="description"
+          class="validate[required,length[6,300]] feedback-input"
+          placeholder="Giới Thiệu Sản Phẩm"
+          ngModel
+        ></textarea>
+      </p>
+
+      <p>
+        <input
+          name="material"
+          type="text"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Chất Liệu Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <input
+          name="price"
+          type="number"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Giá Của Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <input
+          name="quantity"
+          type="number"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Số Lượng Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <input
+          name="sizes"
+          type="text"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Kích Thước Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <p>
+        <input
+          name="id_type"
+          type="number"
+          class="validate[required,custom[email]] feedback-input"
+          placeholder="Loại Của Sản Phẩm"
+          ngModel
+        />
+      </p>
+
+      <a href="/admin">
+        <div class="submit">
+          <input type="submit" value="Sửa Sản Phẩm" id="button-blue" />
+          <div class="ease"></div>
+        </div>
+      </a>
+    </form>
+  </div>
+</div>

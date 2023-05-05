@@ -1,0 +1,176 @@
+<header>
+  <!-- main container wrapper -->
+  <div class="container-fluid mainContainer">
+    <!-- legend section   -->
+    <div class="row legend">
+      <!-- legend introduction text -->
+      <div class="col legend__text">
+        <div class="introText">
+          <h1 class="introText__heading">Store</h1>
+          <p class="introText__link">
+            <a href="#Visit">Check out our collection </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- footer section  -->
+  </div>
+  <!-- <footer class="footer">
+              <p class="footer__text">
+                Created by
+                <a
+                  href="https://www.facebook.com/hel0.o812/"
+                  target="_blank"
+                  rel="noopener"
+                  >Duy Anh Tran</a
+                >
+                &copy;2023
+              </p>
+            </footer> -->
+</header>
+<div class="container" style="padding-top: 35px">
+  <!-- Xbox -->
+  <div *ngFor="let category of categoryList">
+    <section
+      style="background: url('{{ category.category_img }}') 
+      no-repeat center center/cover;"
+      class="xbox xbox1 cart"
+    >
+      <div class="content">
+        <h2>{{ category.category_name }}</h2>
+        <p style="padding-top: 10px; padding-bottom: 10px">
+          {{ category.category_description }}
+        </p>
+        <a routerLink="/store/category/{{ category.id }}" class="btn">
+          Xem Ngay <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Home cards 2 -->
+  <div class="product-header">
+    <p>__________________________________________________________________</p>
+    <h2>Sản Phẩm</h2>
+    <p>__________________________________________________________________</p>
+  </div>
+  <section class="home-cards">
+    <button
+      class="cart btn"
+      *ngFor="let product of products"
+      routerLink="/store/{{ product.id }}"
+    >
+      <img src="{{ product.thumbnail }}" alt="" />
+      <div class="text-sm">
+        <h5>{{ product.name }}</h5>
+        <p class="p-3">{{ product.price | number }} VND</p>
+      </div>
+    </button>
+  </section>
+
+  <!-- Carbon -->
+  <section class="carbon dark cart">
+    <div class="content">
+      <h2>Lef.T là ai ?</h2>
+      <p>Hãy cùng tìm hiểu nhé!</p>
+      <a href="about-us" class="btn">
+        Xem Ngay <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Follow -->
+  <section class="follow">
+    <p>Follow Lef.T</p>
+    <a href="https://www.facebook.com/hel0.o812/">
+      <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/dy._.ah/">
+      <img
+        style="max-width: 37px; max-height: 37px"
+        class="img-thumbnail"
+        src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-png-full-colour-glyph-1200x1199.png"
+        alt="Twitter"
+      />
+    </a>
+    <a href="https://github.com/hehoha3">
+      <img
+        style="max-width: 37px; max-height: 37px"
+        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        alt="Linkedin"
+      />
+    </a>
+  </section>
+
+  <!-- Links -->
+  <!-- <section class="links">
+            <div class="links-inner">
+              <ul>
+                <li><h3>Trợ Giúp</h3></li>
+                <li><a href="#">Đặt hàng & Thanh toán</a></li>
+                <li><a href="#">Vận chuyển & Giao hàng</a></li>
+                <li><a href="#">Đổi & Trả hàng</a></li>
+                <li><a href="#">Hướng dẫn vệ sinh</a></li>
+              </ul>
+              <ul>
+                <li><h3>Showroom</h3></li>
+                <li>
+                  <h6>Showroom Tp. Đà Nẵng:</h6>
+                  <p>
+                    Địa chỉ: Số 484 đường Trần Đại Nghĩa, Phường Hòa Quý, Quận Ngũ Hành
+                    Sơn, TP. Đà Nẵng
+                  </p>
+                </li>
+              </ul>
+              <ul>
+                <li><h3>_____________</h3></li>
+                <li>
+                  <h6>Showroom Tp. Vinh:</h6>
+                  <p>
+                    Địa chỉ: Số 5 đường Phượng Hoàng, Phường Trung Đô, TP. Vinh, Nghệ An
+                  </p>
+                </li>
+              </ul>
+              <ul>
+                <li><h3>Số điện thoại</h3></li>
+                <li>
+                  <p>0329912644</p>
+                </li>
+              </ul>
+              <ul>
+                <li><h3>Developer</h3></li>
+                <li><a href="#">Visual Studio</a></li>
+                <li><a href="#">Windowszs Dev Center</a></li>
+                <li><a href="#">Developer Network</a></li>
+                <li><a href="#">TechNet</a></li>
+                <li><a href="#">Microsoft Developer</a></li>
+              </ul>
+              <ul>
+                <li><h3>Company</h3></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Microsoft</a></li>
+                <li><a href="#">Company news</a></li>
+                <li><a href="#">Privacy at Microsoft</a></li>
+                <li><a href="#">Inverstors</a></li>
+              </ul>
+            </div> -->
+  <!-- </section> -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="fs-6">Showroom:</p>
+        <i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 484 đường Trần Đại
+        Nghĩa , Phường Hòa Quý, Quận Ngũ Hành Sơn, TP. Đà Nẵng
+      </div>
+      <div>| Số 5 đường Phượng Hoàng , Phường Trung Đô, TP. Vinh, Nghệ An</div>
+    </div>
+    <div class="footer-inner">
+      <div>
+        <p class="fs-6">Số Điện Thoại:</p>
+        0329912644
+      </div>
+    </div>
+  </footer>
+</div>
